@@ -38,7 +38,22 @@
                     <h2>Agregar Nuevo Producto</h2>
                     <input type="text" id="nombre" placeholder="Nombre del producto" required>
                     <input type="number" id="precio" placeholder="Precio" step="0.01" min="0" required>
-                    <input type="text" id="imagen" placeholder="URL de la imagen (opcional)">
+
+                    <select id="imagen">
+                        <option value="img/basic.jpeg">basic.jpeg</option>
+                        <option value="img/extreme.png">extreme.png</option>
+                        <option value="img/elite.png">elite.png</option>
+                        <option value="img/Placa1.png">Placa1.png</option>
+                        <option value="img/Mouse.png">Mouse.png</option>
+                        <option value="img/Gabinete.jpg">Gabinete.jpg</option>
+                        <option value="img/Auriculares.webp">Auriculares.webp</option>
+                        <option value="img/Procesador.webp">Procesador.webp</option>
+                        <option value="img/Placa4.png">Placa4.png</option>
+                        <option value="img/Placa3.png">Placa3.png</option>
+                        <option value="img/Teclado.webp">Teclado.webp</option>
+                        <option value="img/placeholder.webp">placeholder.webp</option>
+                    </select>
+
                     <input type="number" id="stock" placeholder="Stock inicial" min="0" required>
                     <button type="submit">Agregar Producto</button>
                 </form>
@@ -48,7 +63,21 @@
                     <input type="hidden" id="edit-id">
                     <input type="text" id="edit-nombre" placeholder="Nombre del producto" required>
                     <input type="number" id="edit-precio" placeholder="Precio" step="0.01" min="0" required>
-                    <input type="text" id="edit-imagen" placeholder="URL de la imagen (opcional)">
+                    <select id="edit-imagen">
+                        <option value="img/basic.jpeg">basic.jpeg</option>
+                        <option value="img/extreme.png">extreme.png</option>
+                        <option value="img/elite.png">elite.png</option>
+                        <option value="img/Placa1.png">Placa1.png</option>
+                        <option value="img/Mouse.png">Mouse.png</option>
+                        <option value="img/Gabinete.jpg">Gabinete.jpg</option>
+                        <option value="img/Auriculares.webp">Auriculares.webp</option>
+                        <option value="img/Procesador.webp">Procesador.webp</option>
+                        <option value="img/Placa4.png">Placa4.png</option>
+                        <option value="img/Placa3.png">Placa3.png</option>
+                        <option value="img/Teclado.webp">Teclado.webp</option>
+                        <option value="img/placeholder.webp">placeholder.webp</option>
+                    </select>
+
                     <input type="number" id="edit-stock" placeholder="Stock" min="0" required>
                     <button type="submit">Guardar Cambios</button>
                     <button type="button" id="cancelar-edicion" class="button-danger">Cancelar</button>

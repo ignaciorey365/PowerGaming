@@ -15,7 +15,11 @@ html, body {
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: whitesmoke;
-    background-image: url(./img/fondo.jpg);
+    background-image: url(/powergaming/img/fondo.jpg);
+
+
+
+
     color: #222;
     line-height: 1.6;
 }
