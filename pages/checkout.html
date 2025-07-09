@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power Gaming - Checkout</title>
+    <link rel="stylesheet" href="../styles.css" />
+    </head>
+<body>
+<div id="custom-alert-container"></div>
+<div id="custom-modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="custom-modal" class="custom-modal hidden">
+    <div class="modal-header">
+        <h5 id="modal-title">Título del Modal</h5>
+        <button type="button" class="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-message">Mensaje del modal.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel-btn" class="modal-btn button-secondary">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="modal-btn button-primary">Aceptar</button>
+    </div>
+</div>
+    <div class="wrapper">
+        <header>
+            <h1><a href="../index.html">Power Gaming</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li id="icono-carrito">🛒 <span id="contador-carrito">0</span></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="carrito-emergente" class="oculto">
+            <h3>Tu Carrito</h3>
+            <div id="contenido-carrito-emergente"><p>El carrito está vacío.</p></div>
+            <p>Total: <span id="total-carrito">$0</span></p>
+            <button onclick="vaciarCarrito()">Vaciar carrito</button>
+            </div>
+
+        <main class="checkout-main">
+            <section class="checkout-section">
+                <h2>Finalizar Compra</h2>
+                
+                <div id="resumen-pedido">
+                    <h3>Resumen de tu Pedido</h3>
+                    <div id="productos-resumen">
+                        <p>No hay productos en el carrito.</p>
+                    </div>
+                    <p class="total-resumen">Total del Pedido: <span id="total-resumen-checkout">$0</span></p>
+                </div>
+
+                <form id="form-checkout">
+                    <h3>Tus Datos de Contacto y Envío</h3>
+                    <label for="checkout-nombre">Nombre:</label>
+                    <input type="text" id="checkout-nombre" name="nombre" required>
+
+                    <label for="checkout-apellido">Apellido:</label>
+                    <input type="text" id="checkout-apellido" name="apellido" required>
+
+                    <label for="checkout-email">Email:</label>
+                    <input type="email" id="checkout-email" name="email" required>
+
+                    <label for="checkout-telefono">Teléfono:</label>
+                    <input type="tel" id="checkout-telefono" name="telefono" required>
+
+                    <label for="checkout-domicilio">Domicilio:</label>
+                    <input type="text" id="checkout-domicilio" name="domicilio" placeholder="Calle, número, piso/departamento" required>
+                    
+                    <label for="checkout-localidad">Localidad:</label>
+                    <input type="text" id="checkout-localidad" name="localidad" required>
+
+                    <label for="checkout-provincia">Provincia:</label>
+                    <input type="text" id="checkout-provincia" name="provincia" required>
+
+                    <label for="checkout-cp">Código Postal:</label>
+                    <input type="text" id="checkout-cp" name="cp" required>
+
+                    <button type="submit" id="btn-confirmar-compra">Confirmar Compra</button>
+                </form>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Power Gaming. Todos los derechos reservados.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

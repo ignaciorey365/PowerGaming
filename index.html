@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power Gaming - Inicio</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="custom-alert-container"></div>
+<div id="custom-modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="custom-modal" class="custom-modal hidden">
+    <div class="modal-header">
+        <h5 id="modal-title">Título del Modal</h5>
+        <button type="button" class="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-message">Mensaje del modal.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel-btn" class="modal-btn button-secondary">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="modal-btn button-primary">Aceptar</button>
+    </div>
+</div>
+  <div class="wrapper">
+    <header>
+      <h1><a href="index.html">Power Gaming</a></h1>
+      <nav>
+        <ul>
+          <li><a href="pages/productos.html">PRODUCTOS</a></li>
+          <li><a href="pages/nosotros.html">SOBRE NOSOTROS</a></li>
+          <li id="icono-carrito">🛒 <span id="contador-carrito">0</span></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div id="carrito-emergente" class="oculto">
+      <h3>Tu Carrito</h3>
+      <div id="contenido-carrito-emergente"><p>El carrito está vacío.</p></div>
+      <p>Total: <span id="total-carrito">$0</span></p> <button onclick="vaciarCarrito()">Vaciar carrito</button>
+      <button onclick="irACheckout()">Finalizar Compra</button>
+    </div>
+
+    <main style="text-align: center; padding: 1rem;">
+      <h2 class="title">Bienvenido a Power Gaming</h2>
+      <p class="inicio">Tu tienda online de confianza para insumos de hardware, periféricos y PCs gamers.</p>
+
+      <div id="carouselMiniaturas" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3500" style="max-width: 600px; margin: auto;">
+        <div class="carousel-inner" style="max-height: 500px;">
+          <div class="carousel-item active">
+            <img src="img/Placa1.png" class="d-block w-100" alt="Placa1" style="object-fit: contain; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Motherboard.png" class="d-block w-100" alt="Motherboard" style="object-fit: contain; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Gabinete.png" class="d-block w-100" alt="Gabinete" style="object-fit: contain; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Teclado.webp" class="d-block w-100" alt="Teclado" style="object-fit: contain; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Placa2.png" class="d-block w-100" alt="Placa2" style="object-fit: contain; height: 500px;">
+          </div>
+          <div class="carousel-item">
+            <img src="img/Mouse.png" class="d-block w-100" alt="Mouse" style="object-fit: contain; height: 500px;">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+
+      <a href="pages/productos.html">
+        <button class="btn-ver-productos">Ver Productos</button>
+      </a>
+    </main>
+
+    <footer>
+      <p>&copy; 2025 Power Gaming. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook fa-lg"></i></a>
+        <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram fa-lg"></i></a>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="app.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

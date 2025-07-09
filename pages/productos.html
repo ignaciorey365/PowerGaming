@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Power Gaming - Productos</title>
+    <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+<div id="custom-alert-container"></div>
+<div id="custom-modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="custom-modal" class="custom-modal hidden">
+    <div class="modal-header">
+        <h5 id="modal-title">Título del Modal</h5>
+        <button type="button" class="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-message">Mensaje del modal.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel-btn" class="modal-btn button-secondary">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="modal-btn button-primary">Aceptar</button>
+    </div>
+</div>
+</div>
+    <div class="wrapper">
+        <header>
+            <h1><a href="../index.html">Power Gaming</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">INICIO</a></li>
+                    <li><a href="productos.html">PRODUCTOS</a></li>
+                    <li><a href="nosotros.html">SOBRE NOSOTROS</a></li>
+                    <li id="icono-carrito">🛒 <span id="contador-carrito">0</span></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="carrito-emergente" class="oculto">
+            <h3>Carrito</h3>
+            <div id="contenido-carrito-emergente">
+                <p>El carrito está vacío.</p>
+            </div>
+            <p>Total: <span id="total-carrito">$0</span></p> <button onclick="vaciarCarrito()">Vaciar carrito</button>
+            <button onclick="irACheckout()">Finalizar Compra</button>
+        </div>
+
+        <main>
+            <section>
+                <h2>Productos</h2>
+                <br>
+                <div id="lista-productos"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Power Gaming. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+    <script type="module" src="../app.js"></script>
+</body>
+</html>
+
+
+
+
+

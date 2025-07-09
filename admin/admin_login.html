@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Gaming - Login Admin</title>
+    <link rel="stylesheet" href="../styles.css" /> <link rel="stylesheet" href="../admin.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="admin-body">
+<div id="custom-alert-container"></div>
+<div id="custom-modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="custom-modal" class="custom-modal hidden">
+    <div class="modal-header">
+        <h5 id="modal-title">Título del Modal</h5>
+        <button type="button" class="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-message">Mensaje del modal.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel-btn" class="modal-btn button-secondary">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="modal-btn button-primary">Aceptar</button>
+    </div>
+</div>
+    <div class="admin-page-content">
+        <main>
+            <div class="login-container">
+                <h2>Acceso de Administrador</h2>
+                <form id="admin-login-form">
+                    <label for="admin-email">Correo Electrónico:</label>
+                    <input type="email" id="admin-email" required>
+
+                    <label for="admin-password">Contraseña:</label>
+                    <input type="password" id="admin-password" required>
+
+                    <button type="submit">Iniciar Sesión</button>
+                    <p id="error-message" style="color: red; margin-top: 10px;"></p>
+                </form>
+            </div>
+        </main>
+    </div> <footer>
+        <p>&copy; 2025 Power Gaming Admin. Todos los derechos reservados.</p>
+    </footer>
+    <script type="module" src="../app.js"></script>
+</body>
+</html>

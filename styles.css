@@ -1,0 +1,693 @@
+/* ---------------------------------------------------
+    Reset y base
+--------------------------------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: whitesmoke;
+    background-image: url(./img/fondo.jpg);
+    color: #222;
+    line-height: 1.6;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* ---------------------------------------------------
+    Encabezado (Header)
+--------------------------------------------------- */
+
+header {
+    background-color: #111;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 a {
+    font-size: 1.8rem;
+    color: #00ff88;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00ff88;
+}
+
+/* ---------------------------------------------------
+    Productos (Estilos de las tarjetas de productos)
+--------------------------------------------------- */
+
+.title {
+    margin-bottom: 1rem;
+    color: #00ff88;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#lista-productos {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+/* Estilos de las tarjetas de productos */
+.card {
+    background: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+}
+
+.card p {
+    margin: 0;
+    color: black;
+}
+
+.card button {
+    margin-top: 0.5rem;
+    background-color: #00ff88;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background-color: #00cc6a;
+}
+
+/* ---------------------------------------------------
+    Carrito Emergente (Consolidado de productos.html y estilos.css)
+--------------------------------------------------- */
+
+#icono-carrito {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+#contador-carrito {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0 6px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+#carrito-emergente {
+    position: absolute;
+    right: 20px;
+    top: 60px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+#carrito-emergente.oculto {
+    display: none;
+}
+
+#carrito-emergente ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#carrito-emergente li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    align-items: center;
+    color: black;
+}
+
+#carrito-emergente li button {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    font-weight: bold;
+}
+#carrito-emergente li button:hover {
+    background-color: #cc0000;
+}
+
+#carrito-emergente h3 {
+    color: black;
+    margin-top: 0;
+    font-size: 1.25rem;
+}
+
+#carrito-emergente p {
+    color: black;
+}
+
+#carrito-emergente button {
+    background-color: #00ff88;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+#carrito-emergente button:hover {
+    background-color: #00cc6a;
+}
+#carrito-emergente button:last-of-type {
+    background-color: #00ff88;
+    color: #000;
+}
+#carrito-emergente button:last-of-type:hover {
+    background-color: #00cc6a;
+}
+#carrito-emergente p#total-carrito {
+    color: black;
+    border-top: none;
+}
+
+
+/* ---------------------------------------------------
+    Botones
+--------------------------------------------------- */
+
+.btn-ver-productos {
+    margin-top: 2rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    background-color: #00ff88;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.btn-ver-productos:hover {
+    background-color: #00cc6a;
+}
+
+/* ---------------------------------------------------
+    Footer
+--------------------------------------------------- */
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #111;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------
+    Estilos globales adicionales
+--------------------------------------------------- */
+
+p {
+    color: white;
+    text-align: center;
+}
+
+.inicio, h2 {
+    color: whitesmoke;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+
+/* ---------------------------------------------------
+    Sección: Quiénes somos / Sobre nosotros
+--------------------------------------------------- */
+
+#quienes-somos {
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    color: #222;
+}
+
+.seccion-nosotros {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.contenedor-nosotros {
+    max-width: 900px;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+    /* Default for desktop, overridden by media queries for mobile */
+    flex-direction: row; 
+    text-align: left;
+    align-items: center;
+}
+
+.nosotros-img {
+    flex-shrink: 0; /* Prevents image from shrinking */
+}
+
+.nosotros-img img {
+    width: 400px; /* Fixed width for desktop */
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+.nosotros-texto {
+    flex: 1;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #222;
+    padding-right: 1rem;
+}
+
+.nosotros-texto h2 {
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.nosotros-texto p {
+    color: #222;
+}
+
+/* ---------------------------------------------------
+    Responsive
+--------------------------------------------------- */
+
+@media (max-width: 767px) { /* Adjust breakpoint to ensure mobile styles apply before 768px */
+    header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    nav ul {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    /* Specific styles for "Nosotros" section on mobile */
+    .contenedor-nosotros {
+        flex-direction: column; /* Stack image and text vertically */
+        align-items: center; /* Center items when stacked */
+        text-align: center; /* Center text when stacked */
+        padding: 1rem; /* Adjust padding for mobile */
+    }
+
+    .nosotros-img {
+        width: 100%; /* Make image container take full width */
+        margin-bottom: 1.5rem; /* Space between image and text */
+        display: flex; /* Use flex to center the image if it's smaller than 100% */
+        justify-content: center;
+    }
+
+    .nosotros-img img {
+        width: 80%; /* Make image responsive, adjust as needed */
+        max-width: 300px; /* Limit max size for image on smaller screens */
+        height: auto;
+    }
+
+    .nosotros-texto {
+        padding-right: 0; /* Remove right padding on mobile */
+        text-align: center; /* Center text on mobile */
+    }
+    
+    .nosotros-texto h2 {
+        text-align: center; /* Ensure h2 is centered on mobile */
+    }
+
+    .nosotros-texto p {
+        text-align: center; /* Ensure paragraphs are centered on mobile */
+    }
+}
+
+/* --- Estilos para la página de Checkout --- */
+.checkout-main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-section h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+#resumen-pedido {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#resumen-pedido h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #555;
+}
+
+#productos-resumen ul {
+    list-style: none;
+    padding: 0;
+}
+
+#productos-resumen li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #eee;
+}
+
+#productos-resumen li:last-child {
+    border-bottom: none;
+}
+
+.total-resumen {
+    text-align: right;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 1rem;
+    color: #000;
+}
+
+#form-checkout label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+#form-checkout input[type="text"],
+#form-checkout input[type="email"],
+#form-checkout input[type="tel"] {
+    width: 100%;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#form-checkout button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-checkout button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Custom Alert Container */
+#custom-alert-container {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1050;
+    width: 90%;
+    max-width: 500px;
+}
+
+.custom-alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    color: #fff;
+}
+
+.custom-alert.show {
+    opacity: 1;
+}
+
+/* Alert types */
+.custom-alert-success {
+    background-color: #28a745;
+    border-color: #218838;
+}
+
+.custom-alert-danger {
+    background-color: #dc3545;
+    border-color: #c82333;
+}
+
+.custom-alert-info {
+    background-color: #17a2b8;
+    border-color: #138496;
+}
+
+.custom-alert-warning {
+    background-color: #ffc107;
+    border-color: #e0a800;
+    color: #343a40;
+}
+
+.custom-alert .close-btn {
+    float: right;
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.2);
+    opacity: 0.5;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.custom-alert-warning .close-btn {
+    color: #343a40;
+}
+
+.custom-alert .close-btn:hover {
+    opacity: 0.75;
+}
+
+/* Custom Modal Backdrop */
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1040;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal-backdrop.show {
+    opacity: 1;
+}
+
+/* Custom Modal */
+.custom-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 1050;
+    width: 90%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 1.5rem;
+}
+
+.custom-modal.show {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #444;
+    margin-bottom: 1rem;
+}
+
+.modal-header h5 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #00ff88;
+}
+
+.close-modal-btn {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: #eee;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+}
+
+.close-modal-btn:hover {
+    opacity: 1;
+}
+
+.modal-body p {
+    padding: 1rem 0;
+    color: #eee !important;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #444;
+    margin-top: 1rem;
+}
+
+.modal-btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-primary {
+    background-color: #00ff88;
+    color: #000;
+}
+
+.button-primary:hover {
+    background-color: #00cc6a;
+}
+
+.button-secondary {
+    background-color: #555;
+    color: #fff;
+}
+
+.button-secondary:hover {
+    background-color: #666;
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none !important;
+}

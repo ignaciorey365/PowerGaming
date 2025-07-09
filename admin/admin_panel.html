@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Gestión de Productos</title>
+    <link rel="stylesheet" href="../styles.css" /> <link rel="stylesheet" href="../admin.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body class="admin-body">
+<div id="custom-alert-container"></div>
+<div id="custom-modal-backdrop" class="modal-backdrop hidden"></div>
+<div id="custom-modal" class="custom-modal hidden">
+    <div class="modal-header">
+        <h5 id="modal-title">Título del Modal</h5>
+        <button type="button" class="close-modal-btn">&times;</button>
+    </div>
+    <div class="modal-body">
+        <p id="modal-message">Mensaje del modal.</p>
+    </div>
+    <div class="modal-footer">
+        <button type="button" id="modal-cancel-btn" class="modal-btn button-secondary">Cancelar</button>
+        <button type="button" id="modal-confirm-btn" class="modal-btn button-primary">Aceptar</button>
+    </div>
+</div>
+    <div class="admin-page-content top-aligned">
+        <header class="admin-header">
+            <h1>Panel de Administración</h1>
+            <nav class="admin-nav-links">
+                <a href="admin_panel.html" class="active-admin-link">Productos</a>
+                <a href="admin_pedidos.html">Pedidos</a>
+            </nav>
+            <button id="logout-button" class="logout-button">Cerrar Sesión</button>
+        </header>
+
+        <main class="main-content-top">
+            <div class="admin-container">
+                <form id="form-agregar-producto">
+                    <h2>Agregar Nuevo Producto</h2>
+                    <input type="text" id="nombre" placeholder="Nombre del producto" required>
+                    <input type="number" id="precio" placeholder="Precio" step="0.01" min="0" required>
+                    <input type="text" id="imagen" placeholder="URL de la imagen (opcional)">
+                    <input type="number" id="stock" placeholder="Stock inicial" min="0" required>
+                    <button type="submit">Agregar Producto</button>
+                </form>
+
+                <form id="form-editar-producto" class="hidden">
+                    <h2>Editar Producto</h2>
+                    <input type="hidden" id="edit-id">
+                    <input type="text" id="edit-nombre" placeholder="Nombre del producto" required>
+                    <input type="number" id="edit-precio" placeholder="Precio" step="0.01" min="0" required>
+                    <input type="text" id="edit-imagen" placeholder="URL de la imagen (opcional)">
+                    <input type="number" id="edit-stock" placeholder="Stock" min="0" required>
+                    <button type="submit">Guardar Cambios</button>
+                    <button type="button" id="cancelar-edicion" class="button-danger">Cancelar</button>
+                </form>
+
+                <div class="product-list-admin">
+                    <h2>Productos Actuales</h2>
+                    <div id="lista-productos-admin">
+                        </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Power Gaming. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="module" src="../app.js"></script>
+</body>
+</html>
+
+
+
+
