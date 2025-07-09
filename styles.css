@@ -15,11 +15,8 @@ html, body {
 body {
     font-family: 'Segoe UI', sans-serif;
     background-color: whitesmoke;
-    background-image: url(img/fondo.jpg);
-
-
-
-
+   /* background-image: url(/powergaming/img/fondo.jpg);*/
+   background-image: url(./img/fondo.jpg);
 
     color: #222;
     line-height: 1.6;
@@ -695,4 +692,94 @@ p {
 /* Utility class to hide elements */
 .hidden {
     display: none !important;
+}
+
+
+
+/*CARD INDEX*/
+
+.destacado.container.my-5 {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+}
+
+/* Card estilo */
+.card.card-inicio {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  width: 100%; 
+  
+}
+
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+
+.mb-md-0 {
+  margin-bottom: 0;
+}
+
+.text-start {
+  text-align: left;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.rounded {
+  border-radius: 10px;
+}
+
+.shadow {
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.destacado ul {
+  list-style: none;
+  padding-left: 0;
+  color: #222;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.destacado ul li::before {
+  content: "✅";
+  margin-right: 8px;
+}
+
+.btn-ver-productos {
+  background-color: #00ff88;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ver-productos:hover {
+  background-color: #00cc6a;
+  color: #000;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+/* Responsive para móviles */
+@media (max-width: 768px) {
+  .text-start {
+    text-align: center; 
+  }
+
+  .mb-4 {
+    margin-bottom: 1rem;
+  }
 }

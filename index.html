@@ -49,39 +49,56 @@
       <h2 class="title">Bienvenido a Power Gaming</h2>
       <p class="inicio">Tu tienda online de confianza para insumos de hardware, periféricos y PCs gamers.</p>
 
-      <div id="carouselMiniaturas" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-interval="3500" style="max-width: 600px; margin: auto;">
-        <div class="carousel-inner" style="max-height: 500px;">
-          <div class="carousel-item active">
-            <img src="img/Placa1.png" class="d-block w-100" alt="Placa1" style="object-fit: contain; height: 500px;">
+      <div class="container my-5"> <div class="row align-items-center g-4"> <div class="col-md-6">
+            <div id="carouselMiniaturas" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3500">
+              <div class="carousel-inner" style="max-height: 500px;">
+                <div class="carousel-item active">
+                  <img src="img/Placa1.png" class="d-block w-100" alt="Placa1" style="object-fit: contain; height: 500px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Motherboard.png" class="d-block w-100" alt="Motherboard" style="object-fit: contain; height: 500px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Gabinete.png" class="d-block w-100" alt="Gabinete" style="object-fit: contain; height: 500px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Teclado.webp" class="d-block w-100" alt="Teclado" style="object-fit: contain; height: 500px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Placa2.png" class="d-block w-100" alt="Placa2" style="object-fit: contain; height: 500px;">
+                </div>
+                <div class="carousel-item">
+                  <img src="img/Mouse.png" class="d-block w-100" alt="Mouse" style="object-fit: contain; height: 500px;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
           </div>
-          <div class="carousel-item">
-            <img src="img/Motherboard.png" class="d-block w-100" alt="Motherboard" style="object-fit: contain; height: 500px;">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Gabinete.png" class="d-block w-100" alt="Gabinete" style="object-fit: contain; height: 500px;">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Teclado.webp" class="d-block w-100" alt="Teclado" style="object-fit: contain; height: 500px;">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Placa2.png" class="d-block w-100" alt="Placa2" style="object-fit: contain; height: 500px;">
-          </div>
-          <div class="carousel-item">
-            <img src="img/Mouse.png" class="d-block w-100" alt="Mouse" style="object-fit: contain; height: 500px;">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselMiniaturas" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
-      </div>
 
-      <a href="pages/productos.html">
-        <button class="btn-ver-productos">Ver Productos</button>
-      </a>
-    </main>
+          <div class="col-md-6">
+            <section class="destacado"> <div class="card card-inicio h-100 d-flex flex-column justify-content-center">
+                <div class="text-start">
+                  <h3>¿Por qué elegir Power Gaming?</h3>
+                  <ul>
+                    <li>Hardware de última generación</li>
+                    <li>Envíos a todo el país</li>
+                    <li>Soporte técnico personalizado</li>
+                    <li>Garantía oficial y medios de pago flexibles</li>
+                  </ul>
+                  <a href="pages/productos.html">
+                    <button class="btn-ver-productos mt-3">Ver Productos</button>
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+
+        </div> </div> </main>
 
     <footer>
       <p>&copy; 2025 Power Gaming. Todos los derechos reservados.</p>
@@ -93,7 +110,6 @@
   </div>
 
   <script type="module" src="app.js"></script>
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
